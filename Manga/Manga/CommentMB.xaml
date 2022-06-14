@@ -1,0 +1,47 @@
+﻿<Window x:Class="Manga.CommentMB" WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Manga"
+        mc:Ignorable="d"
+        Title="CommentMB" Background="Black">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
+        <TextBlock Text="Комментрарии к манге " Grid.Column="1" Grid.ColumnSpan="3" Foreground="White" FontSize="22" VerticalAlignment="Center" />
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="8">
+            <GroupBox MaxWidth="550">
+                <StackPanel VerticalAlignment="Top"  Orientation="Horizontal" MaxWidth="540">
+                    <TextBlock Text="Никнейм" Foreground="White" VerticalAlignment="Center" Margin="10"/>
+                    <Viewbox Margin="10" Width="400" Height="20">
+                        <TextBlock Text="dsds" TextAlignment="Center" TextWrapping="Wrap" Foreground="White"  />
+                    </Viewbox>
+                    <Button Content="Лайк" Height="20" Width="20" Foreground="White" Background="Transparent"/>
+                    <Button Content="Дизлайк" Height="20" Width="20" Foreground="White" Background="Transparent"/>
+                    <TextBlock Text="dfffffffffffffffffffffffffffffff"></TextBlock>
+                </StackPanel>
+                
+            </GroupBox>
+        </ScrollViewer>
+    </Grid>
+</Window>

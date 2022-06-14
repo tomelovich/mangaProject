@@ -1,0 +1,73 @@
+﻿<Window x:Class="Manga.Jojo" WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Manga"
+        mc:Ignorable="d"
+        Title="Jojo" Background="Black">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="BorderlessButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
+        <Button Style="{StaticResource BorderlessButton}" FontSize="22" Foreground="White" Content="Главная" Click="OpenMain_Click" />
+        <Image x:Name="j" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" />
+        <Viewbox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
+            <TextBlock Foreground="White" HorizontalAlignment="Center" Text="Невероятное приключения ДжоДжo"/>
+        </Viewbox>
+        <TextBlock Grid.Column="3" FontSize="14" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="3" Foreground="White" TextWrapping="Wrap" Text="Эта история берёт своё начало в конце XIX века, повествуя нам о двух сводных братьях — Джонатане Джостаре и Дио Брандо.
+
+Проливной дождь, грозовая ночь и неосторожное вождение кареты обернулось трагедией в молодой семье. Человек по имени Дарио Брандо, случайно оказавшийся на месте аварии, никогда не отличавшийся хорошими манерами и представлениями о жизни, решил обокрасть пострадавшего аристократа. Но, к его сожалению или к счастью, мужчина оказался жив. Поблагодарив Дарио за спасение жизни, сэр Джостар, как истинный джентльмен, пообещал не остаться в долгу.
+Спустя двенадцать лет, умирая, Дарио через сына, что его ненавидел, передал Джостару письмо с просьбой приютить молодого отпрыска. После смерти отца, Дио Брандо отправился в поместье, где мгновенно испортил отношения с единственным сыном владельца дома, Джонатаном Джостаром по прозвищу ДжоДжо. ДжоДжо усердно старался выглядеть приличным джентльменом, но ему это плохо удавалось, а с появлением Дио, его беззаботная жизнь и вовсе превратилась в сущий кошмар.
+
+Превратности судьбы нам неизвестны, но случайно ли пересечение этих двух противоположностей? Какие сюрпризы ожидают молодых людей? И какова роль загадочной маски в этой истории?"/>
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" Background="#e8d58c" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="3" Grid.Row="6">
+            <Viewbox>
+                <StackPanel   HorizontalAlignment="Left"  Orientation="Vertical">
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20"  Click="OpenPAR1_Click" Content="Глава 1" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20" Click="OpenPAR2_Click" Content="Глава 2" />
+                </StackPanel>
+            </Viewbox>
+        </ScrollViewer>
+
+        <Button Style="{StaticResource BorderlessButton}" Foreground="White" Grid.Column="4" Grid.Row="6" Width="80" Height="20" Click="OpenCommentMB" Content="Комментарии"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" Background="#e8d58c" Width="100" Height="20">
+            <ComboBoxItem Content="В планах"></ComboBoxItem>
+            <ComboBoxItem Content="Читаю"></ComboBoxItem>
+            <ComboBoxItem Content="Прочитано"></ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>
