@@ -1,0 +1,118 @@
+﻿<Window x:Class="Manga.MyProfile" WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Manga"
+        mc:Ignorable="d"
+        Title="MyProfile" Background="Black" >
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="BorderlessButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
+        <Button Style="{StaticResource BorderlessButton}" FontSize="22" Foreground="White" Content="Главная" Click="OpenMain_Click" />
+        <Viewbox Grid.Column="0" Grid.RowSpan="3"  Grid.Row="1">
+            <Ellipse  Height="80" Width="80">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="myprof"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Никнейм" Foreground="White" Width="80"/>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="2">
+            <TextBlock Text="Обо мне:" Foreground="White" Width="80"/>
+        </Viewbox>
+        <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1">
+            <TextBlock Foreground="White" Text="Пол:"></TextBlock>
+            <TextBlock  Foreground="White" Text="Мужской"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1">
+            <TextBlock Foreground="White" Text="Страна:"></TextBlock>
+            <TextBlock  Foreground="White" Text="Беларусь"></TextBlock>
+        </StackPanel>
+        <TextBlock Foreground="White" Text="lo oh ono o лj ываывааааааааааааааааааааа аааываываываываааааааааааааааааывыв выаываывcvcvvcvcv sd fsd ffffffffffff dfsdfsdfsdfsdf ffffffffffff fffffffffffj ffffcv sd fsd fs dfcvа"  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2" TextWrapping="Wrap"/>
+        <Viewbox Grid.Row="4" Grid.Column="1">
+            <TextBlock Text="Список прочитанного:" Foreground="White"/>
+        </Viewbox>
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="100" Grid.RowSpan="4">
+            <Viewbox>
+                <StackPanel HorizontalAlignment="Left" Height="160" Width="auto" Background="#e8d58c" Orientation="Horizontal">
+                    <Button Margin="4"  Click="OpenMG">
+                        <Image x:Name="mbattle" />
+                    </Button>
+                    <Button Margin="4" Click="OpenAL">
+                        <Image x:Name="alice" />
+                    </Button>
+                    <Button Margin="4" Click="OpenJOJO">
+                        <Image x:Name="jojo" />
+                    </Button>
+                    <Button Margin="4">
+                        <Image x:Name="kaidi" />
+                    </Button>
+                    <Button Margin="4">
+                        <Image x:Name="dragon" />
+                    </Button>
+                    <Button Margin="4">
+                        <Image x:Name="teacher" />
+                    </Button>
+                    <Button Margin="4" Click="OpenNAR">
+                        <Image x:Name="naruto" />
+                    </Button>
+                    <Button Margin="4">
+                        <Image x:Name="oneForFlight" />
+                    </Button>
+                    <Button Margin="4">
+                        <Image x:Name="onepunch" />
+                    </Button>
+                    <Button Margin="4">
+                        <Image x:Name="paint" />
+                    </Button>
+                    <Button Margin="4" Click="OpenParasite">
+                        <Image x:Name="parasite"  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image x:Name="skale" />
+                    </Button>
+                    <Button Margin="4">
+                        <Image x:Name="slamdunk" />
+                    </Button>
+                </StackPanel>
+            </Viewbox>
+        </ScrollViewer>
+    </Grid>
+</Window>

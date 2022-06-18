@@ -42,9 +42,9 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
-        <Button Style="{StaticResource BorderlessButton}" FontSize="22" Foreground="White" Content="Главная" Click="OpenMain_Click" />
-        <Image x:Name="j" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" />
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="White"></Border>
+        <Button Style="{StaticResource BorderlessButton}" FontSize="22" Foreground="Black" Content="Главная" Click="OpenMain_Click" />
+        <Image x:Name="j" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Left" Grid.RowSpan="5" />
         <Viewbox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
             <TextBlock Foreground="White" HorizontalAlignment="Center" Text="Невероятное приключения ДжоДжo"/>
         </Viewbox>
@@ -54,17 +54,17 @@
 Спустя двенадцать лет, умирая, Дарио через сына, что его ненавидел, передал Джостару письмо с просьбой приютить молодого отпрыска. После смерти отца, Дио Брандо отправился в поместье, где мгновенно испортил отношения с единственным сыном владельца дома, Джонатаном Джостаром по прозвищу ДжоДжо. ДжоДжо усердно старался выглядеть приличным джентльменом, но ему это плохо удавалось, а с появлением Дио, его беззаботная жизнь и вовсе превратилась в сущий кошмар.
 
 Превратности судьбы нам неизвестны, но случайно ли пересечение этих двух противоположностей? Какие сюрпризы ожидают молодых людей? И какова роль загадочной маски в этой истории?"/>
-        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" Background="#e8d58c" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="3" Grid.Row="6">
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" Background="White" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="3" Grid.Row="6">
             <Viewbox>
                 <StackPanel   HorizontalAlignment="Left"  Orientation="Vertical">
-                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20"  Click="OpenPAR1_Click" Content="Глава 1" />
-                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20" Click="OpenPAR2_Click" Content="Глава 2" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="Black" Height="20"  Click="OpenJ1_Click" Content="Глава 1" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="Black" Height="20" Click="OpenJ2_Click" Content="Глава 2" />
                 </StackPanel>
             </Viewbox>
         </ScrollViewer>
 
         <Button Style="{StaticResource BorderlessButton}" Foreground="White" Grid.Column="4" Grid.Row="6" Width="80" Height="20" Click="OpenCommentMB" Content="Комментарии"/>
-        <ComboBox Grid.Row="5" Grid.Column="1" Background="#e8d58c" Width="100" Height="20">
+        <ComboBox Grid.Row="7" Grid.Column="1" Background="White" Width="100" Height="20">
             <ComboBoxItem Content="В планах"></ComboBoxItem>
             <ComboBoxItem Content="Читаю"></ComboBoxItem>
             <ComboBoxItem Content="Прочитано"></ComboBoxItem>

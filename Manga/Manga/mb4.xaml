@@ -31,5 +31,12 @@
         <Image x:Name="img" Grid.Column="1" Grid.RowSpan="9" Grid.ColumnSpan="5" />
         <Button Content="&lt;&lt;" Foreground="White" Background="Transparent" Grid.Column="0" Grid.Row="4" Click="n_Click" />
         <Button Content="&gt;&gt;" Foreground="White" Background="Transparent" Grid.Column="6" Grid.Row="4" Click="v_Click" />
+        <StackPanel  Grid.Column="7" Grid.Row="5">
+            <Popup Name="myPopup" IsOpen="False">
+                <Border BorderThickness="1" >
+                    <Button Content="Читать следующую главу?" Click="OpenMB_Click" Background="Transparent" Foreground="White"/>
+                </Border>
+            </Popup>
+        </StackPanel>
     </Grid>
 </Window>

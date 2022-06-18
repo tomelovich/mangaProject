@@ -50,7 +50,7 @@
         <StackPanel  Grid.Column="7" Grid.Row="5">
             <Popup Name="myPopup" IsOpen="False">
                 <Border BorderThickness="1" >
-                    <Button Content="Читать следующую главу?" Click="OpenMB2_Click" Background="Transparent" Foreground="White"/>
+                    <Button Content="Читать следующую главу?" Click="OpenParasite_Click" Background="Transparent" Foreground="White"/>
                 </Border>
             </Popup>
         </StackPanel>

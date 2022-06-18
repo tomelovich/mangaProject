@@ -26,6 +26,12 @@ namespace Manga
             counter.Text = (sch + 1) + " / 20";
             img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\gl4\001.jpg"));
         }
+        private void OpenMB_Click(object sender, RoutedEventArgs e)
+        {
+            MG mb = new MG();
+            this.Close();
+            mb.Show();
+        }
         private void n_Click(object sender, RoutedEventArgs e)
         {
             sch--;
@@ -71,6 +77,10 @@ namespace Manga
             else
             {
                 sch = 19;
+            }
+            if (sch >= 19)
+            {
+                myPopup.IsOpen = true;
             }
             switch (sch)
             {

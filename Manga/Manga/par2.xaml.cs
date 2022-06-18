@@ -26,11 +26,11 @@ namespace Manga
             counter.Text = (sch + 1) + " / 46";
             img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\parasite2\001.jpg"));
         }
-        private void OpenMB2_Click(object sender, RoutedEventArgs e)
+        private void OpenParasite_Click(object sender, RoutedEventArgs e)
         {
-            mb2 gl2 = new mb2();
+            Parasite p = new Parasite();
             this.Close();
-            gl2.Show();
+            p.Show();
         }
         private void n_Click(object sender, RoutedEventArgs e)
         {

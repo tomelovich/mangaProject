@@ -20,12 +20,10 @@ namespace Manga
     public partial class al1 : Window
     {
         int sch = 0;
-
         public al1()
         {
             InitializeComponent();
             counter.Text = (sch + 1) + " / 59";
-
             img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\001.jpg"));
         }
         private void OpenAL2_Click(object sender, RoutedEventArgs e)
@@ -36,7 +34,6 @@ namespace Manga
         }
         private void n_Click(object sender, RoutedEventArgs e)
         {
-
             sch--;
             if ((sch <= 58) && (sch >= 0))
             {
@@ -46,10 +43,8 @@ namespace Manga
             {
                 sch = 58;
             }
-
             switch (sch)
             {
-
                 case 0: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\001.jpg")); break;
                 case 1: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\002.jpg")); break;
                 case 2: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\003.jpg")); break;
@@ -109,7 +104,6 @@ namespace Manga
                 case 56: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\057.jpg")); break;
                 case 57: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\058.jpg")); break;
                 case 58: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\059.jpg")); break;
-
             }
         }
         private void v_Click(object sender, RoutedEventArgs e)
@@ -188,9 +182,7 @@ namespace Manga
                 case 56: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\057.jpg")); break;
                 case 57: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\058.jpg")); break;
                 case 58: img.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\alice1\059.jpg")); break;
-
             }
-
         }
     }
 }

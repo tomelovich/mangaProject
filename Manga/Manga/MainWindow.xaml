@@ -42,27 +42,27 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="White"></Border>
         <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <TextBlock Text="Логотип" Foreground="White" Background="Transparent" FontSize="100"></TextBlock>
+            <TextBlock Text="Логотип" Foreground="Black" Background="Transparent" FontSize="100"></TextBlock>
         </Viewbox>
         <Viewbox  Grid.Column="2" Grid.Row="0">
-            <Button Style="{StaticResource BorderlessButton}" FontSize="1" Foreground="White" Content="Мой профиль" Click="openMyProfile"></Button>
+            <Button Style="{StaticResource BorderlessButton}" FontSize="1" Foreground="Black" Content="Мой профиль" Click="openMyProfile"></Button>
         </Viewbox>
         <Viewbox Grid.Column="3" Grid.RowSpan="1" Grid.Row="0">
-            <Button Style="{StaticResource BorderlessButton}" Content="Каталог" Foreground="White" FontSize="1"></Button>
+            <Button Click="OpenCatalog" Style="{StaticResource BorderlessButton}" Content="Каталог" Foreground="Black" FontSize="1"></Button>
         </Viewbox>
         <Viewbox Grid.Column="4" Grid.RowSpan="1" Grid.Row="0">
-            <Button  Style="{StaticResource BorderlessButton}" Content="О нас" Foreground="White" FontSize="1"></Button>
+            <Button  Style="{StaticResource BorderlessButton}" Content="О нас" Click="OpenDescription" Foreground="Black" FontSize="1"></Button>
         </Viewbox>
         <Viewbox Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="2">
-            <ComboBox Background="#e8d58c" Foreground="White" FontSize="7" IsTextSearchEnabled="False"  IsEditable="True"
+            <ComboBox Background="White"  Foreground="Black" FontSize="7" IsTextSearchEnabled="False"  IsEditable="True"
           VerticalAlignment="Top" Width="105" Height="15"/>
         </Viewbox>
-        <Viewbox Grid.Row="2" >
+        <Viewbox Grid.Row="2" Grid.Column="1" >
             <TextBlock Margin="5" Foreground="White" Text="Рекомендуем:"></TextBlock>
         </Viewbox>
-        <StackPanel HorizontalAlignment="Center" Background="#e8d58c" Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="4">
+        <StackPanel HorizontalAlignment="Center" Background="White" Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="4">
             <Button Margin="4" Click="OpenParasite">
                 <Image x:Name="parasite" />
             </Button>

@@ -1,0 +1,78 @@
+﻿<Window x:Class="Manga.naruto" WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Manga"
+        mc:Ignorable="d"
+        Title="naruto" Background="Black">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="BorderlessButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
+        <Button Style="{StaticResource BorderlessButton}" FontSize="22" Foreground="White" Content="Главная" Click="OpenMain_Click" />
+        <Image x:Name="nar" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" />
+        <Viewbox Grid.Row="1" Grid.Column="1">
+            <TextBlock Foreground="White" HorizontalAlignment="Center" Text="Наруто"/>
+        </Viewbox>
+        <TextBlock Grid.Column="3" FontSize="14" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="3" Foreground="White" TextWrapping="Wrap" Text="Впервые манга Наруто увидела мир еще в конце 90-х годов, сейчас она завершена. Было выпущено 72 тома, которые состоят из 700 глав. Каждая глава описывает свою историю.
+
+Так, вначале автор знакомит читателей с известным для всех героем по имени Наруто. Он не простой, у него есть собственные твердо-поставленные цели и желания. Однако обстоятельства сложились печальным образом, и он стал их жертвой. Закрыв глаза на все преграды, имея решительный дух, отвагу и честь, герой собирается достичь то, что он задумал. После достижения первого по рангу «генина», начинается путь, «путь ниндзя» из деревушки, скрытой в листве, пока не исполнится мечта – стать великим «хокагэ».
+
+Невероятное приключения и динамика событий не дают зрителю передохнуть. В манге, как и в телесериале, очень насыщенно соединены и драма, и разнообразные баталии, и головоломки. Особенно впечатляет действие различных способностей. Но главное, что они оригинальны: почти каждый ниндзя обладает своими особенностями. Не обошлось без злых героев, которым наш смельчак со своими друзьями противостоит.
+
+Главная особенность манги – развивающийся сюжет от маленького мальчика до целого мира, окружающего его. Мир становится понятней с каждой новой главой или серией, раскрывающей суть всех действий и истории."/>
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" Background="#e8d58c" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="3" Grid.Row="6">
+            <Viewbox>
+                <StackPanel   HorizontalAlignment="Left"  Orientation="Vertical">
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20"  Click="OpenNAR1_Click" Content="Глава 1" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20" Click="OpenNAR2_Click" Content="Глава 2" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20" Click="OpenNAR3_Click" Content="Глава 3" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20" Click="OpenNAR4_Click" Content="Глава 4" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20" Click="OpenNAR5_Click" Content="Глава 5" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20" Click="OpenNAR6_Click" Content="Глава 6" />
+                </StackPanel>
+            </Viewbox>
+        </ScrollViewer>
+
+        <Button Style="{StaticResource BorderlessButton}" Foreground="White" Grid.Column="4" Grid.Row="6" Width="80" Height="20" Click="OpenCommentMB" Content="Комментарии"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" Background="#e8d58c" Width="100" Height="20">
+            <ComboBoxItem Content="В планах"></ComboBoxItem>
+            <ComboBoxItem Content="Читаю"></ComboBoxItem>
+            <ComboBoxItem Content="Прочитано"></ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>

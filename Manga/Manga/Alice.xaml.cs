@@ -42,7 +42,6 @@ namespace Manga
             this.Close();
             gl2.Show();
         }
-
         private void OpenCommentMB(object sender, RoutedEventArgs e)
         {
             CommentMB comMB = new CommentMB();

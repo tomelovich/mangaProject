@@ -42,8 +42,8 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
-        <Button Style="{StaticResource BorderlessButton}" FontSize="22" Foreground="White" Content="Главная" Click="OpenMain_Click" />
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="White"></Border>
+        <Button Style="{StaticResource BorderlessButton}" FontSize="22" Foreground="Black" Content="Главная" Click="OpenMain_Click" />
         <Viewbox Grid.Column="0" Grid.RowSpan="3"  Grid.Row="1">
             <Ellipse  Height="80" Width="80">
                 <Ellipse.Fill>
@@ -51,27 +51,26 @@
                 </Ellipse.Fill>
             </Ellipse>
         </Viewbox>
-        <Viewbox Grid.Row="1" Grid.Column="1">
-            <TextBlock Text="Никнейм" Foreground="White" Width="80"/>
-        </Viewbox>
-        <Viewbox Grid.Row="1" Grid.Column="2">
-            <TextBlock Text="Обо мне:" Foreground="White" Width="80"/>
-        </Viewbox>
-        <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1">
-            <TextBlock Foreground="White" Text="Пол:"></TextBlock>
-            <TextBlock  Foreground="White" Text="Мужской"></TextBlock>
+        <TextBlock x:Name="nickname" Foreground="Gold" FontSize="30" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Обо мне:" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24" Grid.Row="4" Grid.Column="0"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="1" Height="57" VerticalAlignment="Bottom">
+            <TextBlock Foreground="White" FontSize="16" HorizontalAlignment="Center" Text="Пол:"></TextBlock>
+            <TextBlock x:Name="sex" Foreground="White" HorizontalAlignment="Center" FontSize="16" Text=""></TextBlock>
         </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1">
-            <TextBlock Foreground="White" Text="Страна:"></TextBlock>
-            <TextBlock  Foreground="White" Text="Беларусь"></TextBlock>
+        <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="1">
+            <TextBlock Foreground="White" HorizontalAlignment="Center" Text="Страна:" FontSize="16"></TextBlock>
+            <TextBlock x:Name="country" FontSize="16" HorizontalAlignment="Center" Foreground="White"></TextBlock>
         </StackPanel>
-        <TextBlock Foreground="White" Text="lo oh ono o лj ываывааааааааааааааааааааа аааываываываываааааааааааааааааывыв выаываывcvcvvcvcv sd fsd ffffffffffff dfsdfsdfsdfsdf ffffffffffff fffffffffffj ffffcv sd fsd fs dfcvа"  Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2" TextWrapping="Wrap"/>
-        <Viewbox Grid.Row="4" Grid.Column="1">
-            <TextBlock Text="Список прочитанного:" Foreground="White"/>
+        <Border BorderBrush="White" BorderThickness="2"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <TextBlock x:Name="info" FontSize="16"  Foreground="White" TextWrapping="Wrap"/>
+        </Border>
+
+        <Viewbox Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" Width="80">
+            <TextBlock Text="Прочитано:" Foreground="White" />
         </Viewbox>
-        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="100" Grid.RowSpan="4">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="6">
             <Viewbox>
-                <StackPanel HorizontalAlignment="Left" Height="160" Width="auto" Background="#e8d58c" Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Center" Height="auto" Width="160" Background="White" Orientation="Vertical">
                     <Button Margin="4"  Click="OpenMG">
                         <Image x:Name="mbattle" />
                     </Button>
@@ -108,8 +107,105 @@
                     <Button Margin="4">
                         <Image x:Name="skale" />
                     </Button>
-                    <Button Margin="4">
+                    <Button Margin="4" Click="OpenSlamDunk" >
                         <Image x:Name="slamdunk" />
+                    </Button>
+                </StackPanel>
+            </Viewbox>
+        </ScrollViewer>
+
+        <Viewbox Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Width="44">
+            <TextBlock Text="Читаю:" Foreground="White" />
+        </Viewbox>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="1" Grid.RowSpan="6">
+            <Viewbox>
+                <StackPanel HorizontalAlignment="Center" Height="auto" Width="160" Background="White" Orientation="Vertical">
+                    <Button Margin="4"  Click="OpenMG">
+                        <Image />
+                    </Button>
+                    <Button Margin="4" Click="OpenAL">
+                        <Image/>
+                    </Button>
+                    <Button Margin="4" Click="OpenJOJO">
+                        <Image />
+                    </Button>
+                    <Button Margin="4">
+                        <Image  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image />
+                    </Button>
+                    <Button Margin="4">
+                        <Image />
+                    </Button>
+                    <Button Margin="4" Click="OpenNAR">
+                        <Image/>
+                    </Button>
+                    <Button Margin="4">
+                        <Image  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image />
+                    </Button>
+                    <Button Margin="4" Click="OpenParasite">
+                        <Image  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image />
+                    </Button>
+                    <Button Margin="4" Click="OpenSlamDunk" >
+                        <Image />
+                    </Button>
+                </StackPanel>
+            </Viewbox>
+        </ScrollViewer>
+        <Viewbox Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" Width="60">
+            <TextBlock Text="В планах:" Foreground="White" />
+        </Viewbox>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="6">
+            <Viewbox>
+                <StackPanel HorizontalAlignment="Center" Height="auto" Width="160" Background="White" Orientation="Vertical">
+                    <Button Margin="4"  Click="OpenMG">
+                        <Image />
+                    </Button>
+                    <Button Margin="4" Click="OpenAL">
+                        <Image/>
+                    </Button>
+                    <Button Margin="4" Click="OpenJOJO">
+                        <Image />
+                    </Button>
+                    <Button Margin="4">
+                        <Image  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image />
+                    </Button>
+                    <Button Margin="4">
+                        <Image />
+                    </Button>
+                    <Button Margin="4" Click="OpenNAR">
+                        <Image/>
+                    </Button>
+                    <Button Margin="4">
+                        <Image  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image />
+                    </Button>
+                    <Button Margin="4" Click="OpenParasite">
+                        <Image  />
+                    </Button>
+                    <Button Margin="4">
+                        <Image />
+                    </Button>
+                    <Button Margin="4" Click="OpenSlamDunk" >
+                        <Image />
                     </Button>
                 </StackPanel>
             </Viewbox>

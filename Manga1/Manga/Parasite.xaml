@@ -1,0 +1,68 @@
+﻿<Window x:Class="Manga.Parasite" WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Manga"
+        mc:Ignorable="d"
+        Title="Parasite" Background="Black">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="BorderlessButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
+        <Button Style="{StaticResource BorderlessButton}" FontSize="22" Foreground="White" Content="Главная" Click="OpenMain_Click" />
+        <Image x:Name="parasite" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" />
+        <Viewbox Grid.Row="1" Grid.Column="1">
+            <TextBlock Foreground="White" HorizontalAlignment="Center" Text="Паразит"/>
+        </Viewbox>
+        <TextBlock Grid.Column="3" FontSize="14" Grid.ColumnSpan="4" Grid.Row="2" Grid.RowSpan="3" Foreground="White" TextWrapping="Wrap" Text="Паразиты... Создания, живущие за счёт своего носителя, обладают совершенно нечеловеческой силой. Посланные небом должны проникать в мозг человека для полной власти над носителем. Но кому как повезёт... Именно эта неудача одного паразита спасает жизнь школьника Синдзи Идзуми, живущего обычной жизнью. Но и эта же неудача делает его носителем этого загадочного существа, обрекая Синдзи на постоянную борьбу за выживание с другими, более сильными паразитами. Что же будет делать Синдзи, если его существование с паразитом в его организме ставит на кон жизни и его близких?"/>
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" Background="#e8d58c" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.Column="3" Grid.Row="6">
+            <Viewbox>
+                <StackPanel   HorizontalAlignment="Left"  Orientation="Vertical">
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20"  Click="OpenPAR1_Click" Content="Глава 1" />
+                    <Button Style="{StaticResource BorderlessButton}" Foreground="White" Height="20" Click="OpenPAR2_Click" Content="Глава 2" />
+                </StackPanel>
+            </Viewbox>
+        </ScrollViewer>
+
+        <Button Style="{StaticResource BorderlessButton}" Foreground="White" Grid.Column="4" Grid.Row="6" Width="80" Height="20" Click="OpenCommentMB" Content="Комментарии"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" Background="#e8d58c" Width="100" Height="20">
+            <ComboBoxItem Content="В планах"></ComboBoxItem>
+            <ComboBoxItem Content="Читаю"></ComboBoxItem>
+            <ComboBoxItem Content="Прочитано"></ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</Window>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="Manga.Reg" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Manga"
+        mc:Ignorable="d"
+        Title="Reg"  Width="700" Height="700" Background="Black">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="BorderlessButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Авторизация" Foreground="White" FontSize="33" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <TextBlock Text="Ник:" Foreground="White" Grid.Column="1" Grid.Row="3" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBlock Text="Пароль:" Foreground="White" Grid.Column="1" Grid.Row="4" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+        <TextBox x:Name="log" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="3" Height="35" FontSize="22" />
+        <PasswordBox x:Name="pass" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="3" Height="35" FontSize="22"  />
+        <Button  Content="Войти" Foreground="White" Click="Open_Click" Grid.Row="5" Grid.Column="4" Height="35" Background="Transparent"/>
+        <Button  Content="Регистрация" Click="OpenRegistration_Click" Foreground="White" Margin="5" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Height="35" Background="Transparent"/>
+    </Grid>
+</Window>

@@ -30,11 +30,23 @@ namespace Manga
             dragon.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\obl\dragon.jpg"));
             paint.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\obl\paint.jpg"));
         }
+        private void OpenCatalog(object sender, RoutedEventArgs e)
+        {
+            Catalog catalog = new Catalog();
+            this.Close();
+            catalog.Show();
+        }
         private void openMyProfile(object sender, RoutedEventArgs e)
         {
             MyProfile profile = new MyProfile();
             this.Close();
             profile.Show();
+        }
+        private void OpenDescription(object sender, RoutedEventArgs e)
+        {
+            description des = new description();
+            this.Close();
+            des.Show();
         }
         private void OpenMG(object sender, RoutedEventArgs e)
         {

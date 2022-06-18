@@ -30,15 +30,15 @@ namespace Manga
             this.Close();
             main.Show();
         }
-        private void OpenPAR1_Click(object sender, RoutedEventArgs e)
+        private void OpenJ1_Click(object sender, RoutedEventArgs e)
         {
-            par1 gl1 = new par1();
+            J1 gl1 = new J1();
             this.Close();
             gl1.Show();
         }
-        private void OpenPAR2_Click(object sender, RoutedEventArgs e)
+        private void OpenJ2_Click(object sender, RoutedEventArgs e)
         {
-            par2 gl2 = new par2();
+            J2 gl2 = new J2();
             this.Close();
             gl2.Show();
         }

@@ -1,0 +1,85 @@
+﻿<Window x:Class="Manga.MainWindow" WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Manga"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="BorderlessButton">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="1" Background="#e8d58c"></Border>
+        <Viewbox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBlock Text="Логотип" Foreground="White" Background="Transparent" FontSize="100"></TextBlock>
+        </Viewbox>
+        <Viewbox  Grid.Column="2" Grid.Row="0">
+            <Button Style="{StaticResource BorderlessButton}" FontSize="1" Foreground="White" Content="Мой профиль" Click="openMyProfile"></Button>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.RowSpan="1" Grid.Row="0">
+            <Button Style="{StaticResource BorderlessButton}" Content="Каталог" Foreground="White" FontSize="1"></Button>
+        </Viewbox>
+        <Viewbox Grid.Column="4" Grid.RowSpan="1" Grid.Row="0">
+            <Button  Style="{StaticResource BorderlessButton}" Content="О нас" Foreground="White" FontSize="1"></Button>
+        </Viewbox>
+        <Viewbox Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="2">
+            <ComboBox Background="#e8d58c" Foreground="White" FontSize="7" IsTextSearchEnabled="False"  IsEditable="True"
+          VerticalAlignment="Top" Width="105" Height="15"/>
+        </Viewbox>
+        <Viewbox Grid.Row="2" >
+            <TextBlock Margin="5" Foreground="White" Text="Рекомендуем:"></TextBlock>
+        </Viewbox>
+        <StackPanel HorizontalAlignment="Center" Background="#e8d58c" Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="4">
+            <Button Margin="4" Click="OpenParasite">
+                <Image x:Name="parasite" />
+            </Button>
+            <Button Margin="4" Click="OpenMG">
+                <Image x:Name="mbattle"  />
+            </Button>
+
+            <Button Margin="4" Click="OpenNAR">
+                <Image x:Name="naruto" />
+            </Button>
+            <Button Margin="4">
+                <Image x:Name="dragon"/>
+            </Button>
+            <Button Margin="4">
+                <Image x:Name="paint"/>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

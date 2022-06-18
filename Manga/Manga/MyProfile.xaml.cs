@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,28 @@ namespace Manga
         public MyProfile()
         {
             InitializeComponent();
+            DB db = new DB();
+            
+            using (MySqlCommand mySqlCommand = new MySqlCommand("SELECT nick, gender, country, info FROM users WHERE nick = @nick", db.getConnection()))
+            {
+                db.openConnection();
+                mySqlCommand.Parameters.AddWithValue("@nick", DataBank.Nickname);
+                
+                
+                using (MySqlDataReader mySqlDataReader = mySqlCommand.ExecuteReader())
+                {
+                    while (mySqlDataReader.Read())
+                    {
+                        nickname.Text = (string)mySqlDataReader[0];
+                        sex.Text = (string)mySqlDataReader[1];
+                        country.Text = (string)mySqlDataReader[2];
+                        info.Text = (string)mySqlDataReader[3];
+                    }
+                }
+
+            }
+            db.closeConnection();
+
             myprof.ImageSource = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\miko.jpg"));
             parasite.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\obl\parazite.jpg"));
             mbattle.Source = new BitmapImage(new Uri(@"C:\Users\Admin\Desktop\Курсовое проектирование\Manga\Manga\Recources\obl\mbattle.jpg"));
@@ -48,6 +72,12 @@ namespace Manga
             Jojo jojo = new Jojo();
             this.Close();
             jojo.Show();
+        }
+        private void OpenSlamDunk(object sender, RoutedEventArgs e)
+        {
+            SlamDunk slamDunk = new SlamDunk();
+            this.Close();
+            slamDunk.Show();
         }
         private void OpenMG(object sender, RoutedEventArgs e)
         {
